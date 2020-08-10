@@ -4,6 +4,7 @@
     <service-instance name="Feeder1" x="213" y="158"/>
     <service-instance name="Display1" x="488" y="150"/>
     <service-instance name="Feeder2" x="401" y="321"/>
+    <service-instance name="Display2" x="557" y="313"/>
     <textNote-Instance name="t" x="596" y="43" height="80" width="80"/>
   </subflow>
   <shortcut-routes/>
