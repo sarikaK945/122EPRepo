@@ -10,11 +10,6 @@
       <target:deployment cache="true" nodes="apigateway"/>
     </target:instance-properties>
   </target:instance>
-  <target:instance name="Xslt1">
-    <target:instance-properties>
-      <target:deployment cache="true" nodes="apigateway"/>
-    </target:instance-properties>
-  </target:instance>
   <target:instance name="Display2">
     <target:instance-properties>
       <target:deployment cache="true" nodes="apigateway"/>
