@@ -7,7 +7,6 @@
       <textNote-Instance name="text" x="580" y="261" height="80" width="80"/>
     </subflow>
     <textNote-Instance name="text" x="580" y="261" height="80" width="80"/>
-    <groupprocess-instance name="GROUP_PROCESS1_0" x="195" y="67"/>
   </subflow>
   <shortcut-routes/>
 </layout>

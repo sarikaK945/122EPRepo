@@ -4,6 +4,7 @@
     <service-instance name="Feeder1" x="175" y="119"/>
     <service-instance name="Display1" x="546" y="131"/>
     <service-instance name="Xslt1" x="408" y="142"/>
+    <service-instance name="Display2" x="553" y="236"/>
   </subflow>
   <shortcut-routes/>
 </layout>
