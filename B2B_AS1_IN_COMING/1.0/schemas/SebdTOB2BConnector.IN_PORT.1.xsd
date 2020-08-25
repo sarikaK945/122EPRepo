@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:fns="http://www.books.org" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.fiorano.com/fesb/activity/B2BConnector">
+   <xsd:element name="B2BConnector">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="Headers">
+               <xsd:complexType>
+                  <xsd:sequence>
+
+                     <xsd:element name="To" type="xsd:string"/>
+                     <xsd:element name="From" type="xsd:string"/>
+                     <xsd:element name="CC" type="xsd:string"/>
+                     <xsd:element name="ReturnSignedReceiptsTo" type="xsd:string"/>
+                     <xsd:element name="Subject" type="xsd:string"/>
+                     <xsd:element name="TextBody" type="xsd:string"/>
+                     <xsd:element name="HtmlBody" type="xsd:string"/>
+                     <xsd:element name="AttachmentName" type="xsd:string"/>
+ <xsd:element name="Header" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:complexType>
+                           <xsd:sequence>
+                              <xsd:element name="Name" type="xsd:string"/>
+                              <xsd:element name="Value" type="xsd:string"/>
+                           </xsd:sequence>
+                        </xsd:complexType>
+                     </xsd:element>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PayLoad">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:any/>
+                  </xsd:sequence>
+                  <xsd:attribute name="isBinaryEncoded" default="false"/>
+                  <xsd:attribute name="isUrl" default="false"/>
+                                    <xsd:attribute name="type" />
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

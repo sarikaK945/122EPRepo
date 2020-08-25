@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:fns="http://www.fiorano.com/fesb/activity/B2B_IN_COMING/JMSIn1/jmsIn/In" xmlns:bodyns="http://www.fiorano.com/fesb/activity/B2BConnector" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.fiorano.com/fesb/activity/B2B_IN_COMING/JMSIn1/jmsIn/In">
+   <xsd:import namespace="http://www.fiorano.com/fesb/activity/B2BConnector"/>
+   <xsd:element name="Message">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="fns:Body"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Body" type="fns:BodyType"/>
+   <xsd:complexType name="BodyType">
+      <xsd:sequence>
+         <xsd:element ref="bodyns:B2BConnector"/>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

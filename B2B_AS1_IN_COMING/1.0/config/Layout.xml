@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<layout>
+  <subflow name="FIORANO.ESTUDIO.ROOT_FLOW" x="0" y="0">
+    <service-instance name="SebdTOB2BConnector" x="734" y="190"/>
+    <service-instance name="AS1_Host_Channel_Intial_Trigger" x="98" y="91"/>
+    <service-instance name="HostChannelSplitter" x="306" y="99"/>
+    <service-instance name="AS1_Host" x="550" y="186"/>
+    <service-instance name="AS1_Host_Channel_Dynamic_Trigger" x="106" y="240"/>
+    <service-instance name="HostChannelRuntimeSplitter" x="316" y="247"/>
+  </subflow>
+  <shortcut-routes/>
+</layout>

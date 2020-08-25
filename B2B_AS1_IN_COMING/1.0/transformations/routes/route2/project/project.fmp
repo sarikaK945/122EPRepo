@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappermodel:MapperProject xmlns:mappermodel="http://www.fiorano.com/tools/mapper/mappermodel" convertor="nameIndexed" version="3.0.2">
+  <mappermodel:Comments>Key in relevant comments</mappermodel:Comments>
+  <mappermodel:InputStructure>
+    <mappermodel:Structure duplicates="" filePath="applicationContextSchema.xsd" mime="DTD" name="Application-Context" rootName="Context"/>
+    <mappermodel:Structure duplicates="" filePath="Request__b2b.xsd" mime="XSD" name="Request" rootName="{http://www.fiorano.com/fesb/activity/POP31/Out}Emails"/>
+  </mappermodel:InputStructure>
+  <mappermodel:OutputStructure>
+    <mappermodel:Structure duplicates="" filePath="IN_PORT.xsd" mime="XSD" name="IN_PORT" rootName="{http://www.fiorano.com/fesb/activity/B2B_IN_COMING/JMSIn1/jmsIn/In}Message">
+      <mappermodel:ExternalStructure filePath="IN_PORT_ext1.XSD" mime="XSD" name="http://www.fiorano.com/fesb/activity/B2BConnector"/>
+    </mappermodel:Structure>
+  </mappermodel:OutputStructure>
+  <mappermodel:Mappings>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,PayLoad:0,isBinaryEncoded:0" x="-1" y="-1">
+      <mappermodel:FunctionGraphNode label="true" type="22" x="194" y="80">
+        <mappermodel:InputPins></mappermodel:InputPins>
+        <mappermodel:OutputPins>str</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,PayLoad:0,isUrl:0" x="-1" y="-1">
+      <mappermodel:FunctionGraphNode label="false" type="22" x="198" y="78">
+        <mappermodel:InputPins></mappermodel:InputPins>
+        <mappermodel:OutputPins>str</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2,3" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,To:0" x="-1" y="-1">
+      <mappermodel:FunctionGraphNode label="getStringProperty" type="144" x="423" y="224">
+        <mappermodel:InputPins>name</mappermodel:InputPins>
+        <mappermodel:OutputPins>string</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:FunctionGraphNode label="BusinessProtocolId" type="22" x="423" y="162">
+        <mappermodel:InputPins></mappermodel:InputPins>
+        <mappermodel:OutputPins>str</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:FunctionGraphNode label="mail_id" type="22" x="250" y="162">
+        <mappermodel:InputPins></mappermodel:InputPins>
+        <mappermodel:OutputPins>str</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:FunctionGraphNode label="setStringProperty" type="136" x="672" y="162">
+        <mappermodel:InputPins>name,value</mappermodel:InputPins>
+        <mappermodel:OutputPins>R</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,To:0" x="142" y="93">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="4" inputIndex="1" outputID="1" outputIndex="0"/>
+      <mappermodel:Link inputID="1" inputIndex="0" outputID="3" outputIndex="0"/>
+      <mappermodel:Link inputID="4" inputIndex="0" outputID="2" outputIndex="0"/>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="4" outputIndex="0"/>
+      <mappermodel:Link inputID="0" inputIndex="1" outputID="5" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,From:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,From:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,CC:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,CC:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,ReturnSignedReceiptsTo:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,ReturnSignedReceiptsTo:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,Subject:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,Subject:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,TextBody:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,Body:0,TextBody:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,HtmlBody:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,Body:0,HtmlBody:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,AttachmentName:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,Attachments:0,[ZERO MANY]:0,Attachment:0,name:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,[ZERO MANY]:0,Header:0,Name:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,Headers:0,[ZERO MANY]:0,Header:0,name:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,[ZERO MANY]:0,Header:0,Value:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,Headers:0,[ZERO MANY]:0,Header:0,value:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,[ZERO MANY]:0,Headers:0,[ZERO MANY]:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,Headers:0,[ZERO MANY]:0,Header:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Message:0,Body:0,B2BConnector:0,PayLoad:0,type:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="Request:0,Emails:0,Email:0,Attachments:0,[ZERO MANY]:0,Attachment:0,contentType:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+  </mappermodel:Mappings>
+  <mappermodel:Extensions/>
+  <mappermodel:UserXSL index="2" node="IN_PORT:0,Message:0,Body:0,B2BConnector:0,PayLoad:0">&lt;xsl:copy-of  select=&quot;$document_Request/ns1:Emails/ns1:Email/ns1:Attachments/ns1:Attachment/node()&quot;>&lt;/xsl:copy-of></mappermodel:UserXSL>
+</mappermodel:MapperProject>

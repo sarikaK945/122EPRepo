@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_35" class="java.beans.XMLDecoder"> 
+ <object class="com.fiorano.services.jmsout.configuration.JMSOutPM"> 
+  <void property="connectionConfiguration"> 
+   <void property="JNDIConfiguration"> 
+    <void property="configName"> 
+     <string>B2B__jndi</string> 
+    </void> 
+   </void> 
+   <void property="connectionConfiguration"> 
+    <void property="clientID"> 
+     <string>EIS__B2B_AS1_IN_COMING__JMSOut1</string> 
+    </void> 
+    <void property="configName"> 
+     <string>B2B__jmsConnConfig</string> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="errorHandlingConfiguration"> 
+   <void property="errorActionsMap"> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>4</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.RetryAction"> 
+       <void property="configuration"> 
+        <object class="com.fiorano.edbc.framework.service.exception.RetryConfiguration"> 
+         <void property="otherActions"> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="enabled"> 
+             <boolean>true</boolean> 
+            </void> 
+            <void property="id"> 
+             <int>1</int> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="enabled"> 
+             <boolean>true</boolean> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>3</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>7</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>3</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>2</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>1</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.RetryAction"> 
+       <void property="configuration"> 
+        <object class="com.fiorano.edbc.framework.service.exception.RetryConfiguration"> 
+         <void property="otherActions"> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="enabled"> 
+             <boolean>true</boolean> 
+            </void> 
+            <void property="id"> 
+             <int>1</int> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="enabled"> 
+             <boolean>true</boolean> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="id"> 
+        <int>2</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>0</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>6</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="messageDefinitionConfiguration"> 
+   <void property="useXMLInterface"> 
+    <boolean>true</boolean> 
+   </void> 
+   <void property="xiiConfiguration"> 
+    <void property="headers"> 
+     <object class="java.util.ArrayList"> 
+      <void method="add"> 
+       <object class="com.fiorano.services.libraries.jms.configuration.JMSHeader" method="valueOf"> 
+        <string>CORRELATION_ID</string> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="com.fiorano.services.libraries.jms.configuration.JMSHeader" method="valueOf"> 
+        <string>DESTINATION</string> 
+       </object> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="includeHeader"> 
+     <boolean>false</boolean> 
+    </void> 
+    <void property="includeProperties"> 
+     <boolean>false</boolean> 
+    </void> 
+    <void property="schema"> 
+     <object class="fiorano.esb.record.ESBRecordDefinition"> 
+      <void property="rootElementName"> 
+       <string>Channels</string> 
+      </void> 
+      <void property="structure"> 
+       <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;
+&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.fiorano.com/b2b/host/trigger&quot;&gt;&#13;
+   &lt;xsd:element name=&quot;Channels&quot;&gt;&#13;
+      &lt;xsd:complexType&gt;&#13;
+         &lt;xsd:sequence&gt;&#13;
+            &lt;xsd:element minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; name=&quot;Channel&quot;&gt;&#13;
+               &lt;xsd:complexType&gt;&#13;
+                  &lt;xsd:sequence&gt;&#13;
+                     &lt;xsd:element name=&quot;CONNCONFIGID&quot; type=&quot;xsd:string&quot;/&gt;&#13;
+                     &lt;xsd:element name=&quot;INTRCONFIGID&quot; type=&quot;xsd:string&quot;/&gt;&#13;
+					 &lt;xsd:element name=&quot;MISCCONFIGID&quot; type=&quot;xsd:string&quot;/&gt;&#13;
+					 &lt;xsd:element name=&quot;Action&quot; type=&quot;xsd:string&quot;/&gt;&#13;
+                  &lt;/xsd:sequence&gt;&#13;
+               &lt;/xsd:complexType&gt;&#13;
+            &lt;/xsd:element&gt;&#13;
+         &lt;/xsd:sequence&gt;&#13;
+         &#13;
+      &lt;/xsd:complexType&gt;&#13;
+   &lt;/xsd:element&gt;&#13;
+&lt;/xsd:schema&gt;</string> 
+      </void> 
+      <void property="targetNamespace"> 
+       <string>http://www.fiorano.com/b2b/host/trigger</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="xmlContext"> 
+     <boolean>true</boolean> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="receiveConfiguration"> 
+   <void property="destinationConfiguration"> 
+    <void property="name"> 
+     <string>FIORANO_B2B_HOST_TRIGGER_AS1</string> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="targetNameSpace"> 
+   <string>http://www.fiorano.com/fesb/activity/B2B_AS1_IN_COMING/JMSOut1</string> 
+  </void> 
+ </object> 
+</java> 

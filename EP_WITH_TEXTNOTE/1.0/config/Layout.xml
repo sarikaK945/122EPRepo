@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<layout>
+  <subflow name="FIORANO.ESTUDIO.ROOT_FLOW" x="0" y="0">
+    <service-instance name="Feeder1" x="395" y="142"/>
+    <textNote-Instance name="t" x="333" y="188" height="80" width="80"/>
+  </subflow>
+  <shortcut-routes/>
+</layout>

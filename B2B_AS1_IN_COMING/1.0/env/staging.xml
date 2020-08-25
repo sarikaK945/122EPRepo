@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:target="http://fiorano.com/environment/1.0" xsi:schemaLocation="http://fiorano.com/environment/1.0 env.xsd">
+  <target:instance name="HostChannelSplitter">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
+  <target:instance name="AS1_Host_Channel_Intial_Trigger">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
+  <target:instance name="HostChannelRuntimeSplitter">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
+  <target:instance name="SebdTOB2BConnector">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
+  <target:instance name="AS1_Host">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
+  <target:instance name="AS1_Host_Channel_Dynamic_Trigger">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
+</target:target>

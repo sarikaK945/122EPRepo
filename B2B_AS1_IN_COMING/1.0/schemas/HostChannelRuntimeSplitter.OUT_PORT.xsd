@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fsoa="http://www.fiorano.com/b2b/host/trigger" elementFormDefault="qualified" targetNamespace="http://www.fiorano.com/b2b/host/trigger">
+   <xsd:element name="Channels">
+      <xsd:complexType>
+         <xsd:sequence>
+            
+                     <xsd:element ref="fsoa:Channel"/>
+         </xsd:sequence>
+         
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Channel">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="CONNCONFIGID" type="xsd:string"/>
+                     <xsd:element name="INTRCONFIGID" type="xsd:string"/>
+					             <xsd:element name="MISCCONFIGID" type="xsd:string"/>
+					             <xsd:element name="Action" type="xsd:string"/>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+</xsd:schema>

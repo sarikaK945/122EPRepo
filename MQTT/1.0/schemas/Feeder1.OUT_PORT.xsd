@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:fns="Root" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="Root">
+   <xsd:element name="Input">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" name="TopicName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="QOS" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="Message" type="xsd:string"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

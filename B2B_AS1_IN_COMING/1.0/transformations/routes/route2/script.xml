@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:set="http://exslt.org/sets" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:math="http://exslt.org/math" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xalan="http://xml.apache.org/xslt" xmlns:java="http://xml.apache.org/xslt/java" exclude-result-prefixes="xalan java lxslt" xmlns:ns2="http://www.fiorano.com/fesb/activity/B2BConnector" xmlns:ns4="http://www.w3.org/2001/XMLSchema" xmlns:ns3="http://www.fiorano.com/fesb/activity/B2B_IN_COMING/JMSIn1/jmsIn/In" xmlns:ns1="http://www.fiorano.com/fesb/activity/POP31/Out" xmlns:dateConversion="ext1" xmlns:myext="ext2" xmlns:strings="ext3" extension-element-prefixes="datetime set math dateConversion myext strings">
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_Request" select="document('Request')"></xsl:variable>
+  <xsl:template match="/">
+    <ns3:Message>
+      <ns3:Body>
+        <ns2:B2BConnector>
+          <Headers>
+            <To>
+              <xsl:value-of select="java:setStringProperty($_TIF_MESSAGE_, 'BusinessProtocolId', java:getStringProperty($_TIF_MESSAGE_, 'mail_id'))"></xsl:value-of>
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:To"></xsl:value-of>
+            </To>
+            <From>
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:From"></xsl:value-of>
+            </From>
+            <CC>
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:CC"></xsl:value-of>
+            </CC>
+            <ReturnSignedReceiptsTo>
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:ReturnSignedReceiptsTo"></xsl:value-of>
+            </ReturnSignedReceiptsTo>
+            <Subject>
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:Subject"></xsl:value-of>
+            </Subject>
+            <TextBody>
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:Body/ns1:TextBody"></xsl:value-of>
+            </TextBody>
+            <HtmlBody>
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:Body/ns1:HtmlBody"></xsl:value-of>
+            </HtmlBody>
+            <AttachmentName>
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:Attachments/ns1:Attachment/@name"></xsl:value-of>
+            </AttachmentName>
+            <xsl:for-each select="$document_Request/ns1:Emails/ns1:Email/ns1:Headers/ns1:Header">
+              <Header>
+                <Name>
+                  <xsl:value-of select="./@name"></xsl:value-of>
+                </Name>
+                <Value>
+                  <xsl:value-of select="./@value"></xsl:value-of>
+                </Value>
+              </Header>
+            </xsl:for-each>
+          </Headers>
+          <PayLoad>
+            <xsl:attribute name="isBinaryEncoded">
+              <xsl:value-of select="'true'"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:attribute name="isUrl">
+              <xsl:value-of select="'false'"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:attribute name="type">
+              <xsl:value-of select="$document_Request/ns1:Emails/ns1:Email/ns1:Attachments/ns1:Attachment/@contentType"></xsl:value-of>
+            </xsl:attribute><xsl:copy-of  select="$document_Request/ns1:Emails/ns1:Email/ns1:Attachments/ns1:Attachment/node()"></xsl:copy-of></PayLoad>
+        </ns2:B2BConnector>
+      </ns3:Body>
+    </ns3:Message>
+  </xsl:template>
+<!--The list of parameters defined by user-->
+  <xsl:param name="_TIF_MESSAGE_"></xsl:param>
+</xsl:stylesheet>
